@@ -452,7 +452,7 @@ main(int argc, char *argv[])
             msg[0].reverse_stream = INVALID_STREAM;
             msg[0].reliability_params = 0;
             sprintf((char *) &((&msg[0].reliability_params)[1]),"chan %d",stream);
-            len = sizeof(msg) + strlen((char *) &((&msg[0].reliability_params)[1]));
+            len = (int)(sizeof(msg) + strlen((char *) &((&msg[0].reliability_params)[1])));
 
             timeout = channels_out[stream].reliability_params;
             switch(channels_out[stream].channel_type)

@@ -1098,7 +1098,7 @@ extern void sctp_userspace_ip6_output(int *result, struct mbuf *o_pak,
 #endif
 
 struct mbuf *
-sctp_get_mbuf_for_msg(unsigned int space_needed, int want_header, int how, int allonebuf, int type);
+sctp_get_mbuf_for_msg(size_t space_needed, int want_header, int how, int allonebuf, int type);
 
 
 /* with the current included files, this is defined in Linux but
