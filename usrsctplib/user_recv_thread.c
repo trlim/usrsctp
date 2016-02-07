@@ -1054,7 +1054,7 @@ recv_function_udp6(void *arg)
 #endif
 
 static void
-setReceiveBufferSize(int sfd, int new_size)
+setReceiveBufferSize(userland_socket_t sfd, int new_size)
 {
 	int ch = new_size;
 
@@ -1069,7 +1069,7 @@ setReceiveBufferSize(int sfd, int new_size)
 }
 
 static void
-setSendBufferSize(int sfd, int new_size)
+setSendBufferSize(userland_socket_t sfd, int new_size)
 {
 	int ch = new_size;
 

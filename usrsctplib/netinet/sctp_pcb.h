@@ -318,14 +318,14 @@ struct sctp_base_info {
 #endif
 #endif
 #ifdef INET
-	int userspace_rawsctp;
-	int userspace_udpsctp;
+	userland_socket_t userspace_rawsctp;
+	userland_socket_t userspace_udpsctp;
 	userland_thread_t recvthreadraw;
 	userland_thread_t recvthreadudp;
 #endif
 #ifdef INET6
-	int userspace_rawsctp6;
-	int userspace_udpsctp6;
+	userland_socket_t userspace_rawsctp6;
+	userland_socket_t userspace_udpsctp6;
 	userland_thread_t recvthreadraw6;
 	userland_thread_t recvthreadudp6;
 #endif

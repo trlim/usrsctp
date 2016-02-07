@@ -48,6 +48,7 @@
 #include <Mswsock.h>
 #include <Windows.h>
 #include "user_environment.h"
+typedef SOCKET userland_socket_t;
 typedef CRITICAL_SECTION userland_mutex_t;
 #if WINVER < 0x0600
 enum {
@@ -277,6 +278,7 @@ typedef char* caddr_t;
 #if defined(__Userspace_os_DragonFly) || defined(__Userspace_os_FreeBSD) || defined(__Userspace_os_Linux) || defined(__Userspace_os_NetBSD) || defined(__Userspace_os_OpenBSD) || defined(__Userspace_os_NaCl)
 #include <pthread.h>
 #endif
+typedef int userland_socket_t;
 typedef pthread_mutex_t userland_mutex_t;
 typedef pthread_cond_t userland_cond_t;
 typedef pthread_t userland_thread_t;
